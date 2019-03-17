@@ -11,20 +11,29 @@ function calculateGrade(form) {
 function sum() {
 	var karakterer = document.getElementsByName('karakter');
 	var studiepoeng = document.getElementsByName('studiepoeng');
+	var karakterVekt;  
+	var karakterPoeng = [];
 	var karakterSum = 0;
-	var studiepoengSum = 0;  
+	var studiepoengSum = 0; 
 
-	// legger sammen summen av karakterene
+
+	// Vektlegger karakterene etter antall studiepoeng og legger de inn i et array. 
 	for (i = 0; i < karakterer.length; i++) {
 		if (karakterer[i].value) {
-		karakterSum += parseInt(karakterer[i].value); 
+		karakterVekt = parseInt(karakterer[i].value) * parseFloat(studiepoeng[i].value);
+		karakterPoeng.push(karakterVekt);
 		}
+	}
+
+	// Legger sammen summen av karakterene 
+	for (k = 0; k < karakterPoeng.length; k++) {
+			karakterSum += karakterPoeng[k];
 	}
 
 	// Legger sammen summen av studiepoengene
 	for(j = 0; j < studiepoeng.length; j++) {
 		if (studiepoeng[j].value) {
-		studiepoengSum += parseInt(studiepoeng[j].value); 
+		studiepoengSum += parseFloat(studiepoeng[j].value); 
 		}
 	}
 
@@ -41,11 +50,11 @@ function sum() {
 }
 	
 
-// Lager nye rekker
+// Legger til nye rekker
 function addRows(){
 	var karakterParent = document.getElementById("karakterform");
 	var karakterInput = document.createElement("input");
-	karakterInput.type = "number"; 
+	karakterInput.type = "text"; 
 	karakterInput.name = "karakter";
 	karakterInput.className = "inputfield";
 	karakterInput.placeholder = "Karakter";
