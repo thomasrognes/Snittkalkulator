@@ -1,14 +1,23 @@
 body{
 	text-align: center;
-	background: #485563;  /* fallback for old browsers */
-  	background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
-  	background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #0F2027;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #0F2027, #2C5364, #203A43);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #0F2027, #2C5364, #203A43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   	font-family: Lucida Console;
   	color: white;
 }
 
 h2 {
-	font-size: 50px;
+	font-size: 60px;
+}
+
+button {
+	font-family: Lucida Console;
+	font-size: 15px;
+	margin-top: 12px;
+	color: white;
+	background-color: grey;
+	border: 2px solid grey;
 }
 
 ::placeholder {
@@ -87,9 +96,6 @@ h2 {
 	line-height: 1.5em;
 }
 
-#sumButton {
-	margin-top: 5px;
-}
 
 
 

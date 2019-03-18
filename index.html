@@ -27,13 +27,13 @@
 				<input type="text" name="karakter" class="inputfield" placeholder="Karakter" maxlength="1">
 				
 			</form>
-			<button type="button" id="sumButton" onclick="sum()">
+			<button type="button" onclick="sum()">
 				Regn ut!
 			</button>
 		</div>
 
 		<div id="left-side2">
-			<p> Skriv inn karakteren i bokstavform (A-F) og antall studiepoeng i feltene til høyre. Trykk på "Legg til flere fag!" dersom du trenger flere felt. Trykk "Regn ut!" for å finne ut hva karaktersnittet ditt er!</p>
+			<p> Skriv inn karakteren i bokstavform (A-F) og antall studiepoeng i feltene til høyre. Trykk på "Legg til flere fag!" dersom du trenger flere felt. Trykk "Regn ut!" for å finne ut hva ditt karaktersnitt er!</p>
 		</div>
 
 	</div>
@@ -52,13 +52,14 @@
 				<input type="number" name="studiepoeng" class="inputfield" placeholder="Studiepoeng">
 				<input type="number" name="studiepoeng" class="inputfield" placeholder="Studiepoeng">
 			</form>
-			<button type="button" id="addButton" onclick="addRows()">
+			<button type="button" onclick="addRows()">
 				Legg til flere fag!
 			</button>
 		</div>
 	
 		<div id="right-side2">
-			<h1 id="sum">Kommer du inn på master i Informasjonsvitenskap? </h1>
+			<h1 id="sum">Hva er ditt snitt? </h1>
+			<p id="karakterInfo"></p>
 		</div>
 	</div>
 </div>

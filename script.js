@@ -1,91 +1,91 @@
 
-/*
-*
-*
-*
-*/
+// Function which 
 function calculateGrade(input) {
 	var numberToReturn; 
+	var checkString = input.toLowerCase();
+	console.log(checkString);
 
-	if (input == "a") {
+	if (checkString == "a") {
 		numberToReturn = 5; 
-	} else if (input == "b") {
+	} else if (checkString == "b") {
 		numberToReturn = 4; 
-	} else if (input == "c") {
+	} else if (checkString == "c") {
 		numberToReturn = 3; 
-	} else if (input == "d") {
+	} else if (checkString == "d") {
 		numberToReturn = 2; 
-	} else if (input == "e") {
+	} else if (checkString == "e") {
 		numberToReturn = 1; 
-	} else if (input == "f") {
+	} else if (checkString == "f") {
 		numberToReturn = 0; 
 	}
 	return numberToReturn; 
 }
 
 
-// Summerer sammen. 
+// Function which find out the GPA.  
 function sum() {
-	var karakterer = document.getElementsByName('karakter');
-	var studiepoeng = document.getElementsByName('studiepoeng');
-	var karakterVekt;  
-	var karakterPoeng = [];
-	var karakterSum = 0;
-	var studiepoengSum = 0; 
+	var grades = document.getElementsByName('karakter'); //
+	var credits = document.getElementsByName('studiepoeng');
+	var gradeWeight;  
+	var gradePoints = [];
+	var gradeSum = 0;
+	var creditSum = 0; 
 
-
-	console.log(calculateGrade(karakterer[1].value));
-
-	// Vektlegger karakterene etter antall studiepoeng og legger de inn i et array. 
-	for (i = 0; i < karakterer.length; i++) {
-		if (karakterer[i].value) {
-		karakterVekt = calculateGrade(karakterer[i].value) * parseFloat(studiepoeng[i].value);
-		karakterPoeng.push(karakterVekt);
+	// Weights the grades after credits and put them in an array. 
+	for (i = 0; i < grades.length; i++) {
+		if (grades[i].value) {
+		gradeWeight = calculateGrade(grades[i].value) * parseFloat(credits[i].value);
+		gradePoints.push(gradeWeight);
 		}
 	}
 
-	// Legger sammen summen av karakterene 
-	for (k = 0; k < karakterPoeng.length; k++) {
-			karakterSum += karakterPoeng[k];
+	// Adds the sum of the grades to gradeSum
+	for (k = 0; k < gradePoints.length; k++) {
+			gradeSum += gradePoints[k];
 	}
 
-	// Legger sammen summen av studiepoengene
-	for(j = 0; j < studiepoeng.length; j++) {
-		if (studiepoeng[j].value) {
-		studiepoengSum += parseFloat(studiepoeng[j].value); 
+	// Adds the sum of the credits to creditSum
+	for(j = 0; j < credits.length; j++) {
+		if (credits[j].value) {
+		creditSum += parseFloat(credits[j].value); 
 		}
 	}
 
-	// Finner ut karaktersnittet
-	var sum = karakterSum / studiepoengSum;
+	// Finds out the GPA.
+	var sum = gradeSum / creditSum;
 		
-	// Sjekker om feltene er tomme og gir tilbakemelding dersom det er tilfelle. 
+	// Checks if the fields are empty and gives feedback if that is the case.  
 	if (sum > 0) {
 		document.getElementById('sum').innerHTML = "Ditt snitt er " + sum;
+		document.getElementById('karakterInfo').innerHTML = "A = 5 <br>\
+															B = 4 <br>\
+															C = 3 <br>\
+															D = 2 <br>\
+															E = 1 <br>";
+															
 	} else {
-		alert("Vennligst sett inn karakterer og antall studiepoeng.");
+		alert("Vennligst sett inn grades og antall credits. grades skrives inn i bokstavform (A-F).");
 	}
-
 }
 	
 
-// Legger til nye rekker
+// Adds new rows. 
 function addRows(){
-	var karakterParent = document.getElementById("karakterform");
-	var karakterInput = document.createElement("input");
-	karakterInput.type = "text"; 
-	karakterInput.name = "karakter";
-	karakterInput.className = "inputfield";
-	karakterInput.placeholder = "Karakter";
-	karakterInput.maxLength = "1";
+	var gradeParent = document.getElementById("karakterform");
+	var gradeInput = document.createElement("input");
+	gradeInput.type = "text"; 
+	gradeInput.name = "karakter";
+	gradeInput.className = "inputfield";
+	gradeInput.placeholder = "Karakter";
+	gradeInput.maxLength = "1";
 
-	var studiepoengParent = document.getElementById("studiepoengform");
-	var studiepoengInput = document.createElement("input");
-	studiepoengInput.type = "number"; 
-	studiepoengInput.name = "studiepoeng";
-	studiepoengInput.className = "inputfield";
-	studiepoengInput.placeholder = "Studiepoeng";
+	var creditParent = document.getElementById("studiepoengform");
+	var creditInput = document.createElement("input");
+	creditInput.type = "number"; 
+	creditInput.name = "credits";
+	creditInput.className = "inputfield";
+	creditInput.placeholder = "credits";
 
-	karakterParent.appendChild(karakterInput);
-	studiepoengParent.appendChild(studiepoengInput);
+	gradeParent.appendChild(gradeInput);
+	creditParent.appendChild(creditInput);
 }			
