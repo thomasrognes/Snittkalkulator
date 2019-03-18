@@ -1,5 +1,5 @@
 
-// Function which 
+// Function that converts letters (Grades) to number. 
 function calculateGrade(input) {
 	var numberToReturn; 
 	var checkString = input.toLowerCase();
