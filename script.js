@@ -79,7 +79,7 @@ function addRows(){
 	creditInput.type = "number"; 
 	creditInput.name = "credits";
 	creditInput.className = "inputfield";
-	creditInput.placeholder = "credits";
+	creditInput.placeholder = "Studiepoeng";
 
 	gradeParent.appendChild(gradeInput);
 	creditParent.appendChild(creditInput);
