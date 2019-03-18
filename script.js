@@ -57,12 +57,7 @@ function sum() {
 	// Checks if the fields are empty and gives feedback if that is the case.  
 	if (sum > 0) {
 		document.getElementById('sum').innerHTML = "Ditt snitt er " + sum;
-		document.getElementById('karakterInfo').innerHTML = "A = 5 <br>\
-															B = 4 <br>\
-															C = 3 <br>\
-															D = 2 <br>\
-															E = 1 <br>";
-															
+		document.getElementById('karakterInfo').innerHTML = "A = 5 <br>\ B = 4 <br>\ C = 3 <br>\ D = 2 <br>\ E = 1 <br>";
 	} else {
 		alert("Vennligst sett inn grades og antall credits. grades skrives inn i bokstavform (A-F).");
 	}
