@@ -22,7 +22,7 @@ function calculateGrade(input) {
 }
 
 
-// Function which find out the GPA.  
+// Function that finds out the GPA.  
 function sum() {
 	var grades = document.getElementsByName('karakter'); //
 	var credits = document.getElementsByName('studiepoeng');
