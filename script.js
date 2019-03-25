@@ -3,7 +3,6 @@
 function calculateGrade(input) {
 	var numberToReturn; 
 	var checkString = input.toLowerCase();
-	console.log(checkString);
 
 	if (checkString == "a") {
 		numberToReturn = 5; 
@@ -59,7 +58,7 @@ function sum() {
 		document.getElementById('sum').innerHTML = "Ditt snitt er " + sum;
 		document.getElementById('karakterInfo').innerHTML = "A = 5 <br>\ B = 4 <br>\ C = 3 <br>\ D = 2 <br>\ E = 1 <br>";
 	} else {
-		alert("Vennligst sett inn grades og antall credits. grades skrives inn i bokstavform (A-F).");
+		alert("Vennligst sett inn karakterer og antall studiepoeng. Karakterer skrives inn i bokstavform (A-F).");
 	}
 }
 	
