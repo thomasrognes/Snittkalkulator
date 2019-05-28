@@ -76,7 +76,7 @@ function addRows(){
 	var creditParent = document.getElementById("studiepoengform");
 	var creditInput = document.createElement("input");
 	creditInput.type = "number"; 
-	creditInput.name = "credits";
+	creditInput.name = "studiepoeng";
 	creditInput.className = "inputfield";
 	creditInput.placeholder = "Studiepoeng";
 
